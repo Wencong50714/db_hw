@@ -7803,7 +7803,7 @@ service_type
 <span class="s1">    FROM service</span>
 <span class="s1">    JOIN employee ON service.employee_id = employee.id</span>
 <span class="s1">    JOIN service_type ON service.type = service_type.type</span>
-<span class="s1">    WHERE employee.name = '小明';</span>
+<span class="s1">    WHERE employee.name = '吉格斯';</span>
 <span class="s1">'''</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -7817,12 +7817,12 @@ service_type
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>┌─────────┬──────────┐
-│  type   │ position │
-│ varchar │ varchar  │
-├────────────────────┤
-│       0 rows       │
-└────────────────────┘</pre>
+<pre>┌─────────┬────────────┐
+│  type   │  position  │
+│ varchar │  varchar   │
+├─────────┼────────────┤
+│ 洗澡    │ 宠物护理师 │
+└─────────┴────────────┘</pre>
 </div>
 </div>
 </div>
@@ -7857,13 +7857,13 @@ service_type
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">con</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s1">'''</span>
-<span class="s1">SELECT product_info.name, "order".amount, product.stock_quantity</span>
-<span class="s1">FROM "order"</span>
-<span class="s1">JOIN owner ON "order".owner_id = owner.id</span>
-<span class="s1">JOIN contains ON "order".id = contains.order_id</span>
-<span class="s1">JOIN product ON contains.product_id = product.id</span>
-<span class="s1">JOIN product_info ON product.name = product_info.name</span>
-<span class="s1">WHERE owner.name = 'EZ瑞尔';</span>
+<span class="s1">    SELECT product_info.name, "order".amount, product.stock_quantity</span>
+<span class="s1">    FROM "order"</span>
+<span class="s1">    JOIN owner ON "order".owner_id = owner.id</span>
+<span class="s1">    JOIN contains ON "order".id = contains.order_id</span>
+<span class="s1">    JOIN product ON contains.product_id = product.id</span>
+<span class="s1">    JOIN product_info ON product.name = product_info.name</span>
+<span class="s1">    WHERE owner.name = 'EZ瑞尔';</span>
 <span class="s1">'''</span><span class="p">)</span>
 </pre></div>
 </div>
